@@ -1,0 +1,33 @@
+Author: Devika
+
+This program is designed to simulate a web server built in Java. 
+It is utilizing Socket and ServerSocket, opening http connection to localhost.
+Port is identified as 8000. User can choose any port depending on user's machine.
+
+
+Instruction:
+1. Run WebServerExample.java 
+2. It will invoke the HttpRequest.java that is implemented using Thread
+3. Go to Web Browser, type in http://localhost:8000 -> (8000 is the port number)
+4. The console will prompt users to enter the HttpRequest-like message
+   format: GET /index.html HTTP/1.0 (index.html is present in the current path)
+   Type that format in the console and press enter
+5. Go back to web browser and user will see the index.html welcome page
+6. Response message will be shown in the console
+
+
+Exception:
+1. If user types a request with no GET as the first word, web browser will
+   show: 501 Bad Request
+   (Assuming in this program, we will only process GET request)
+2. If user requests a page/object that is not present in the directory
+   Example: GET /about.html HTTP/1.0 
+   user will be presented with an error: 404: Page Not Found in the browser
+
+Note:
+1. Try to open multiple tabs and connect to the same localhost
+2. When the program is running, avoid compiling the program again.
+   If user wants to refresh the program, or tries different request, 
+   simply refresh the web browser and the console will prompt user
+   to enter a new request. 
+ 
